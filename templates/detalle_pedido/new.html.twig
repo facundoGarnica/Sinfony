@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New DetallePedido{% endblock %}
+
+{% block body %}
+    <link rel="stylesheet" href="{{ asset('Css/StyleForNew.css') }}">
+    <div class="container">
+        <h1>Crear nuevo DetallePedido</h1>
+
+        {{ include('detalle_pedido/_form.html.twig') }}
+
+        <a href="{{ path('app_detalle_pedido_index') }}" class="back-link">Volver a la lista</a>
+    </div>
+{% endblock %}

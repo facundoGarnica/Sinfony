@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Cliente{% endblock %}
+
+{% block body %}
+    <link rel="stylesheet" href="{{ asset('Css/StyleForNew.css') }}">
+    <div class="container">
+        <h1>Crear nuevo Cliente</h1>
+
+        {{ include('cliente/_form.html.twig') }}
+
+        <a href="{{ path('app_cliente_index') }}" class="back-link">Volver a la lista</a>
+    </div>
+{% endblock %}

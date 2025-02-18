@@ -1,0 +1,44 @@
+#DivMenu {
+    background-color: #8a6a02;  /* Color verde agua */
+    border: 2px solid #000000;  /* Agrega un borde de 2px con color #009999 */
+    height: 100px;  /* Ajusta la altura del contenedor */
+    width: 100%;  /* Hace que el contenedor ocupe todo el ancho de la página */
+    display: flex;  /* Usamos Flexbox para alinear el contenido */
+    justify-content: center;  /* Centra el contenido horizontalmente */
+    align-items: center;  /* Centra el contenido verticalmente */
+}
+
+#TituloMenu {
+    font-size: 2rem;  /* Ajusta el tamaño del texto si lo necesitas */
+    color: white;  /* Color blanco para el texto */
+}
+
+.Lista {
+    display: flex;  /* Usa Flexbox para alinear los items en fila */
+    justify-content: space-between;  /* Distribuye los items a lo largo del ancho de la pantalla */
+    padding: 0;  /* Elimina el padding predeterminado de la lista */
+    margin: 0;  /* Elimina el margin predeterminado de la lista */
+    list-style-type: none;  /* Elimina los puntos de la lista */
+}
+
+.item {
+    flex: 1;  /* Hace que cada item ocupe el mismo espacio */
+    text-align: center;  /* Centra el texto dentro de cada item */
+    background-color: rgba(197, 146, 5, 0.39);
+    border: 2px solid #000000;  /* Agrega un borde de 2px con color #009999 */
+    border-radius: 5px;  /* Opcional: redondea las esquinas del borde */
+    padding: 10px;  /* Añade un pequeño espacio entre el texto y el borde */
+}
+
+.item:hover {
+    background-color: rgba(80, 59, 1, 0.39);  /* Cambia el color de fondo al pasar el cursor */
+    border-color: #006666;  /* Cambia el color del borde al pasar el cursor */
+}
+
+.item a {
+    text-decoration: none;  /* Elimina el subrayado de los enlaces */
+    color: rgb(0, 0, 0);  /* Puedes cambiar el color del texto si lo necesitas */
+    font-size: 1.2rem;  /* Ajusta el tamaño de la fuente */
+    display: block;  /* Hace que el enlace ocupe todo el área del item */
+    padding: 10px 0;  /* Espaciado dentro de cada item */
+}

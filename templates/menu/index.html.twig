@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Pagina principal{% endblock %}
+
+{% block body %}
+<link rel="stylesheet" href="{{ asset('Css/StyleMenu.css') }}">
+
+<div id="DivMenu">
+    <h1 id = "TituloMenu">Menú Principal</h1>
+</div>
+<div id="ColumnaOpciones">
+    <ul class="Lista" > 
+        <li class = "item"><a href="{{ path('app_cliente_index') }}">Ver clientes</a></li>
+        <li class = "item"><a href="{{ path('app_producto_index') }}">Ver productos</a></li>
+        <li class = "item"><a href="{{ path('app_pedido_index')}}">Ver pedidos</a></li>
+    </ul>
+</div>
+
+
+
+{% endblock %}

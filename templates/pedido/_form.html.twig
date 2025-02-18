@@ -1,0 +1,17 @@
+{{ form_start(form, {'attr': {'class': 'form-container'}}) }}
+
+    {% for field in form %}
+        <div class="form-group">
+            {{ form_label(field, null, {'attr': {'class': 'form-label'}}) }}
+
+            {% if field.vars.block_prefixes|last == 'datetime' or field.vars.block_prefixes|last == 'date' %}
+                {{ form_widget(field, {'attr': {'class': 'form-control datetime-picker'}}) }}
+            {% else %}
+                {{ form_widget(field, {'attr': {'class': 'form-control'}}) }}
+            {% endif %}
+        </div>
+    {% endfor %}
+
+    <button class="btn">{{ button_label|default('Guardar') }}</button>
+
+{{ form_end(form) }}

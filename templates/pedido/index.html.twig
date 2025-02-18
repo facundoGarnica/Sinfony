@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Pedido index{% endblock %}
+
+{% block body %}
+    <link rel="stylesheet" href="{{ asset('Css/StyleFormularios.css') }}">
+    <h1>Pedido </h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Fecha</th>
+                <th>Estado</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for pedido in pedidos %}
+            <tr>
+                <td>{{ pedido.id }}</td>
+                <td>{{ pedido.Fecha ? pedido.Fecha|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ pedido.Estado }}</td>
+                <td>
+                    <a href="{{ path('app_pedido_show', {'id': pedido.id}) }}">show</a>
+                    <a href="{{ path('app_pedido_edit', {'id': pedido.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    
+    <a href="{{ path('app_pedido_new') }}"class = "crearNuevo">Crear pedido</a>
+    <a href="{{ path('app_menu') }}" class ="VolverMenu"> Volver al menu</a>
+{% endblock %}
